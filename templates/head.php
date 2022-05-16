@@ -14,10 +14,10 @@
 <body>
     <h1>Jacks hemsida</h1>
     <div class="topnav" id="myTopnav">
-    <a href="#home" class="active">Home</a>
-    <a href="register-form.php">Registrera</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+    <a href="#Hem" class="active">Home</a>
+    <a href="Eegister-form.php">Registrera</a>
+    <a href="#Kontakta oss">Contact</a>
+    <a href="#Om">About</a>
     <a href="javascript:void(0);" class="icon" onclick="hideTopNav()">
     <i class="fa fa-bars"></i>
     </a>
