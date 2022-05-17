@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrera dig här!</title>
+    <title>Logga in</title>
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         .error {color: #900;}
     </style>
@@ -14,10 +15,10 @@
 <body>
     <h1>Jacks hemsida</h1>
     <div class="topnav" id="myTopnav">
-    <a href="#Hem" class="active">Home</a>
+    <a href="#home" class="active">Hem</a>
     <a href="Register-form.php">Registrera</a>
-    <a href="#Kontakta oss">Contact</a>
-    <a href="#Om">About</a>
+    <a href="#contaxt">Kontakta oss</a>
+    <a href="#About">Om</a>
     <a href="javascript:void(0);" class="icon" onclick="hideTopNav()">
     <i class="fa fa-bars"></i>
     </a>

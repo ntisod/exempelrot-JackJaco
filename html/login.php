@@ -67,8 +67,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $conn = null;
-    //Ta oss till en annan sida
-    //header("Location: welcome.php");   
+    include("../templates/head.php");
+    
   }
 
 }
@@ -103,10 +103,7 @@ function test_input($data) {
 </form>
 
 <?php
-echo "<h2>Din inmatning:</h2>";
-echo $username;
-echo "<br>";
-echo $pw;
+
 
 include "../templates/foot.php";
 
