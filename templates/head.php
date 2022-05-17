@@ -16,7 +16,7 @@
     <h1>Jacks hemsida</h1>
     <div class="topnav" id="myTopnav">
     <a href="#home" class="active">Hem</a>
-    <a href="Register-form.php">Registrera</a>
+    <a href="register-form.php">Registrera</a>
     <a href="#contaxt">Kontakta oss</a>
     <a href="#About">Om</a>
     <a href="javascript:void(0);" class="icon" onclick="hideTopNav()">
