@@ -1,5 +1,5 @@
 <?php
-
+require("../include/wsp1-functions.php");
 
 // define variables and set to empty values
 $pwErr = $pwTestErr = $usernameErr = "";
@@ -31,12 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
 
-  echo "Antal fel: $errors" ;
     
   //Kontrollera om det inte finns errors
   if($errors<1){
     //Skicka data till databasen
-    require("..\includes\settings.php");
+    require("../includes/settings.php");
     
     try {
       $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbuser, $dbpw);
@@ -45,19 +44,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $sql = "INSERT INTO users (username, password) VALUES ('$username', '$pw');";
       // use exec() because no results are returned
       $conn->exec($sql);
-      echo "Ny post skapad.";
+
+      $conn = null;
+      header("Location: welcome.php");
+
     } 
     catch(PDOException $e) 
     {
       echo $sql . "<br>" . $e->getMessage();
     }
 
-    $conn = null;
-    header("Location: welcome.php");
-
   }
 
 }
+
+
 
 function test_input($data) {
   $data = trim($data);
@@ -65,6 +66,9 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 } 
+
+include("../templates/head.php");
+
 
 ?>
 

@@ -15,7 +15,14 @@
 <body>
     <h1>Jacks hemsida</h1>
     <div class="topnav" id="myTopnav">
+
+    if (window.location.href.indexOf("login.php") > -1) 
+    {
     <a href="#home" class="active">Hem</a>
+    }
+    else
+    <a href="#home">Hem</a>
+
     <a href="register-form.php">Registrera</a>
     <a href="#contaxt">Kontakta oss</a>
     <a href="#About">Om</a>
