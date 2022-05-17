@@ -46,11 +46,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // use exec() because no results are returned
       $conn->exec($sql);
       echo "Ny post skapad.";
-    } catch(PDOException $e) {
+    } 
+    catch(PDOException $e) 
+    {
       echo $sql . "<br>" . $e->getMessage();
     }
 
     $conn = null;
+    header("Location: welcome.php");
 
   }
 
