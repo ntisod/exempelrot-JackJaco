@@ -1,5 +1,5 @@
 <?php
-require("../include/wsp1-functions.php");
+require("../includes/wsp1-functions.php");
 
 // define variables and set to empty values
 $pwErr = $pwTestErr = $usernameErr = "";
@@ -97,15 +97,7 @@ include("../templates/head.php");
   <input type="submit" name="submit" value="Registrera"> 
 </form>
 
-<?php
-echo "<h2>Din inmatning:</h2>";
-echo $username;
-echo "<br>";
-echo $pw;
-echo "<br>";
-echo $pwTest;
 
-?>
 
 </body>
 </html>

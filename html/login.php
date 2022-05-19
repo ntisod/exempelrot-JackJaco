@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   //Kontrollera om det inte finns errors
   if($errors<1){
     //Hämta db-inställningar
-    require("..\includes\settings.php");
+    require("../includes/settings.php");
     
     //Hämta hashat lösenord från DB
     try {
@@ -61,13 +61,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           echo "Fel lösenord, eller användarnamn.";
       }
 
+      header("Location: welcome.php");
 
     } catch(PDOException $e) {
       echo $sql . "<br>" . $e->getMessage();
     }
 
     $conn = null;
-    include("../templates/head.php");
     
   }
 
@@ -79,6 +79,8 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 } 
+
+include("../templates/head.php");
 
 ?>
 
