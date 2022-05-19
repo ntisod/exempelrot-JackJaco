@@ -1,5 +1,4 @@
 <?php
-include("../templates/head.php");
 require("../includes/wsp1-functions.php"); //TL testUser 7/4
 
 // define variables and set to empty values
@@ -55,13 +54,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $verified = password_verify($pw, $resultat["password"]);
  
       //Låt olika saker hända beroende på om man skrivit rätt lösenord eller inte
-      if($verified){
-          echo "Grattis, du är inloggad!";
-      } else{
-          echo "Fel lösenord, eller användarnamn.";
+      if($verified)
+      {
+        header("Location: welcome.php");
+      } 
+      else
+      {
+        echo "Fel lösenord, eller användarnamn.";
       }
 
-      header("Location: welcome.php");
+      
 
     } catch(PDOException $e) {
       echo $sql . "<br>" . $e->getMessage();

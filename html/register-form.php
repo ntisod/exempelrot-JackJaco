@@ -41,7 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbuser, $dbpw);
       // set the PDO error mode to exception
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      $sql = "INSERT INTO users (username, password) VALUES ('$username', '$pw');";
+      $hashed_pw = password_hash($pw, PASSWORD_DEFAULT);
+      $sql = "INSERT INTO users (username, password) VALUES ('$username', '$hashed_pw');";
       // use exec() because no results are returned
       $conn->exec($sql);
 
