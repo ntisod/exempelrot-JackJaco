@@ -15,9 +15,10 @@
 <body>
     <h1>Jacks hemsida</h1>
     <div class="topnav" id="myTopnav">
-    <a href="#home" class="active">Hem</a>
+    <a href="." class="active">Hem</a>
+    <a href="login.php">Logga in</a>
     <a href="register-form.php">Registrera</a>
-    <a href="#contaxt">Kontakta oss</a>
+    <a href="#logout.php">Logga ut</a>
     <a href="#About">Om</a>
     <a href="javascript:void(0);" class="icon" onclick="hideTopNav()">
     <i class="fa fa-bars"></i>
